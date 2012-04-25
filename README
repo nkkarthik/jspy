@@ -1,13 +1,42 @@
-# spy
+* spy
 
-FIXME: write description
+A simple java trace utility
 
-## Usage
+* Usage
 
-FIXME: write
+   Checkout into a directory (say /spy/).
 
-## License
+** Change =.spy.clj=:
 
-Copyright (C) 2011 FIXME
+1. Change =:host= and =:port= to point to the remote debug session.
+2. Set =:classes= to the base package of the classes to trace.
+3. Optionally, change =exclude-classes= list to packages/classes you want to exclude from trace.
 
-Distributed under the Eclipse Public License, the same as Clojure.
+
+** Start repl: [fn:: If =bin/lein= is not executable then run: =chmod u+x bin/lein= ] 
+
+   In the shell:
+
+   #+begin_example
+   =spy$ bin/lein repl= 
+   #+end_example 
+
+** Start spy: [fn:: Assuming you have already started the remote debug session with jvm args ~-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=<port-number>~ ]
+   
+   #+begin_example
+   spy=> (spy)   
+   #+end_example
+   
+** Show trace (and stop spy):
+
+   #+begin_example
+   spy=> (gui)
+   #+end_example
+
+** Exit with =Ctrl-C=.
+
+* License
+
+   Copyright (C) 2011 BMLs
+
+   Distributed under the Eclipse Public License, the same as Clojure.
