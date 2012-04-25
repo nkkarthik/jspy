@@ -2,38 +2,41 @@
 
 A simple java trace utility
 
-* Usage
+** Usage
 
    Checkout into a directory (say /spy/).
 
-** Change =.spy.clj=:
+*** Change =.spy.clj=
 
 1. Change =:host= and =:port= to point to the remote debug session.
 2. Set =:classes= to the base package of the classes to trace.
 3. Optionally, change =exclude-classes= list to packages/classes you want to exclude from trace.
 
+*** Start repl:
 
-** Start repl: [fn:: If =bin/lein= is not executable then run: =chmod u+x bin/lein= ] 
+    In the shell:
 
-   In the shell:
+    #+begin_example
+    =spy$ bin/lein repl= 
+    #+end_example 
 
-   #+begin_example
-   =spy$ bin/lein repl= 
-   #+end_example 
+    Note: If =bin/lein= is not executable then run: =chmod u+x bin/lein=
 
-** Start spy: [fn:: Assuming you have already started the remote debug session with jvm args ~-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=<port-number>~ ]
-   
-   #+begin_example
-   spy=> (spy)   
-   #+end_example
-   
-** Show trace (and stop spy):
+*** Start spy
+    
+    #+begin_example
+    spy=> (spy)   
+    #+end_example
+    
+    This is assuming remote debug session is already started with jvm args ~-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=<port-number>~
 
-   #+begin_example
-   spy=> (gui)
-   #+end_example
+*** Show trace (and stop spy)
 
-** Exit with =Ctrl-C=.
+    #+begin_example
+    spy=> (gui)
+    #+end_example
+
+*** Exit with =Ctrl-C=
 
 * License
 
