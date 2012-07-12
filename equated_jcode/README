@@ -1,0 +1,12 @@
+============================ equated jSpy ==================================
+
+This directory contains Java-equivalent source of jspy.
+It is authored with purpose to help understand principles of JDI used by jSpy.
+
+v 1.0 - lays basic structure of JDI calls
+
+roadmap
+a) provide full call sequence to JDI
+b) expose configurable filters to call stack
+c) introduce reporting
+d) publish flexible report data

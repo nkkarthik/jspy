@@ -1,3 +1,12 @@
+==============================  equated jSpy ================================
+	==============================unstable============================
+a copy of jSpy master, this branch is aimed to provide useful insight into jSpy call sequence through equivalent java programs.
+
+=============================================================================
+
+
+
+
 * spy
 
 A simple java trace utility
