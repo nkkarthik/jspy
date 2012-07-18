@@ -10,3 +10,8 @@ a) provide full call sequence to JDI
 b) expose configurable filters to call stack
 c) introduce reporting
 d) publish flexible report data
+
+
+v 1.1
+- added data collection routine
+- added data type/structure base (in progress)
