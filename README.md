@@ -4,12 +4,13 @@ A simple java trace utility
 
 ## Requirements
 
-1. Lein 1 (didn't move to lein 2 yet)
+1. Lein
 2. JDK 1.6
 
 ## Usage
 
 - Checkout into a directory (say *spy*)
+ -- `mvn install:install-file -Dfile=tools.jar -DgroupId=com.sun -DartifactId=tools -Dversion=1.6.0 -Dpackaging=jar`
 - `project.clj`: point `tools.jar` to the one in your JDK
 - Change `.spy.clj`
   - Change `:host` and `:port` to point to the remote debug session

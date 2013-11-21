@@ -16,12 +16,8 @@
     ExceptionEvent StepEvent]
    [com.sun.tools.jdi SocketAttachingConnector]))
 
-(def common-excludes ["java.*" "com.sun.*" "sun.*"
-                      "net.*" "org.*" "swank.*"
-                      "clojure.*"])
-
 (def opts (atom {:includes nil
-                 :excludes common-excludes
+                 :excludes nil
                  :host "localhost"
                  :port 5002
                  :exclude-methods nil}))
@@ -29,7 +25,7 @@
 (defn spy-on [& {:keys [host port classes
                         exclude exclude-methods]}]
   {:pre [host port classes]}
-  (let [excludes (set (concat common-excludes exclude))]
+  (let [excludes (set exclude)]
     (swap! opts conj {:host host
                       :port port
                       :includes [classes]
